@@ -80,8 +80,8 @@ for (const locale of locales) {
       homeUrl: isHome ? "#top" : "index.html",
       brandLabel: isHome ? copy.brandTop : copy.brandHome,
       privacyCurrent: isHome ? "" : ' aria-current="page"',
-      iphoneLink: isHome ? render('<a class="button button-outline header-link" href="#iphone">{{iphoneLink}}</a>', copy) : "",
-      script: isHome ? render('<script src="{{base}}tones.js" defer></script>', { base }) : "",
+      iphoneLink: isHome ? render('      <a class="button button-outline header-link" href="#iphone">{{iphoneLink}}</a>', copy) : "",
+      script: isHome ? render('  <script src="{{base}}tones.js" defer></script>', { base }) : "",
     });
 
     await writeFile(new URL(file, output), result);
