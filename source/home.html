@@ -1,0 +1,142 @@
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> {{heroEyebrow}}</p>
+        <h1 id="hero-title">{{heroLineOne}}<br><span>{{heroLineTwo}}</span></h1>
+        <p class="intro">{{heroIntro}}</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#features">{{explore}}</a>
+          <a class="text-action" href="#sounds"><span class="play-icon" aria-hidden="true"></span> {{listen}}</a>
+        </div>
+      </div>
+
+      <figure class="hero-art" aria-label="{{previewAlt}}">
+        <div class="art-orbit orbit-large" aria-hidden="true"></div>
+        <div class="art-orbit orbit-small" aria-hidden="true"></div>
+        <span class="spark spark-one" aria-hidden="true">✦</span>
+        <span class="spark spark-two" aria-hidden="true">✦</span>
+        <span class="spark spark-three" aria-hidden="true">✧</span>
+        <span class="art-caption">{{previewCaption}}</span>
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen">
+            <div class="phone-status"><b>9:41</b><span class="phone-camera"></span><span class="battery"></span></div>
+            <div class="phone-header"><span>Meowly<span class="wordmark-dot">.</span></span><span class="phone-add">+</span></div>
+            <p class="phone-label">{{previewTitle}}</p>
+            <div class="alarm-list">
+              <div class="alarm-row">
+                <span class="alarm-icon sun"><img src="{{base}}assets/icon-sun.png" alt=""></span>
+                <div><strong>07:30</strong><span>{{previewMorning}}</span></div>
+                <span class="switch on"></span>
+              </div>
+              <div class="alarm-row">
+                <span class="alarm-icon water"><img src="{{base}}assets/icon-water.png" alt=""></span>
+                <div><strong>12:00</strong><span>{{previewWater}}</span></div>
+                <span class="switch on"></span>
+              </div>
+              <div class="alarm-row">
+                <span class="alarm-icon sleep"><img src="{{base}}assets/icon-sleep.png" alt=""></span>
+                <div><strong>22:45</strong><span>{{previewBedtime}}</span></div>
+                <span class="switch"></span>
+              </div>
+            </div>
+            <span class="home-bar"></span>
+          </div>
+        </div>
+        <div class="app-sticker" aria-hidden="true">
+          <img src="{{base}}assets/meowly-icon.webp" alt="" width="128" height="128">
+        </div>
+        <div class="alarm-sticker" aria-hidden="true">
+          <span class="alarm-icon sun"><img src="{{base}}assets/icon-sun.png" alt=""></span>
+          <div><small>{{previewMorning}}</small><strong>07:30</strong></div>
+        </div>
+      </figure>
+    </section>
+
+    <section class="features section" id="features" aria-labelledby="features-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> {{features}}</p>
+          <h2 id="features-title">{{featureTitle}}</h2>
+        </div>
+        <p>{{featureIntro}}</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature feature-peach">
+          <div class="feature-visual visual-single" aria-hidden="true">
+            <div class="time-widget">
+              <img src="{{base}}assets/icon-sun.png" alt="" width="22" height="22">
+              <strong>07:30</strong>
+              <span class="switch on"></span>
+            </div>
+          </div>
+          <h3>{{singleTitle}}</h3>
+          <p>{{singleBody}}</p>
+        </article>
+
+        <article class="feature feature-lavender">
+          <div class="feature-visual visual-batch" aria-hidden="true">
+            <span>09:00</span><span>09:30</span><span>10:00</span>
+          </div>
+          <h3>{{batchTitle}} <span class="plan">Pro</span></h3>
+          <p>{{batchBody}}</p>
+        </article>
+
+        <article class="feature feature-green">
+          <div class="feature-visual visual-style" aria-hidden="true">
+            <span class="alarm-icon cat"><img src="{{base}}assets/icon-cat.png" alt=""></span>
+            <span class="alarm-icon water"><img src="{{base}}assets/icon-water.png" alt=""></span>
+            <span class="alarm-icon gold"><img src="{{base}}assets/icon-bell.png" alt=""></span>
+          </div>
+          <h3>{{customTitle}}</h3>
+          <p>{{customBody}}</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sounds section" id="sounds" aria-labelledby="sounds-title">
+      <div class="sound-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> {{sounds}}</p>
+        <h2 id="sounds-title">{{soundTitle}}</h2>
+        <p>{{soundBody}}</p>
+      </div>
+      <div class="sound-list" data-error="{{soundError}}">
+        <div class="sound-row">
+          <span class="alarm-icon gold"><img src="{{base}}assets/icon-sun.png" alt=""></span>
+          <div class="sound-name"><strong id="purr">Morning Purr</strong><span id="purr-detail">{{purrDetail}}</span></div>
+          <audio controls preload="auto" aria-labelledby="purr purr-detail">
+            <source src="{{purrAudio}}" type="audio/mpeg">
+            <source src="{{base}}assets/meowly-morning-purr.mp3" type="audio/mpeg">
+          </audio>
+          <button class="sound-play" type="button" data-play="{{purrPlay}}" data-pause="{{purrPause}}" aria-label="{{purrPlay}}" hidden></button>
+        </div>
+        <div class="sound-row">
+          <span class="alarm-icon cat"><img src="{{base}}assets/icon-paw.png" alt=""></span>
+          <div class="sound-name"><strong id="whisker">Whisker</strong><span id="whisker-detail">{{whiskerDetail}}</span></div>
+          <audio controls preload="auto" aria-labelledby="whisker whisker-detail">
+            <source src="{{whiskerAudio}}" type="audio/mpeg">
+            <source src="{{base}}assets/gentle-whisker.mp3" type="audio/mpeg">
+          </audio>
+          <button class="sound-play" type="button" data-play="{{whiskerPlay}}" data-pause="{{whiskerPause}}" aria-label="{{whiskerPlay}}" hidden></button>
+        </div>
+        <div class="sound-row">
+          <span class="alarm-icon sleep"><img src="{{base}}assets/icon-star.png" alt=""></span>
+          <div class="sound-name"><strong id="pounce">Pounce</strong><span id="pounce-detail">{{pounceDetail}}</span></div>
+          <audio controls preload="auto" aria-labelledby="pounce pounce-detail">
+            <source src="{{pounceAudio}}" type="audio/mpeg">
+            <source src="{{base}}assets/energetic-pounce.mp3" type="audio/mpeg">
+          </audio>
+          <button class="sound-play" type="button" data-play="{{pouncePlay}}" data-pause="{{pouncePause}}" aria-label="{{pouncePlay}}" hidden></button>
+        </div>
+        <p class="sound-error" role="status"></p>
+      </div>
+    </section>
+
+    <section class="iphone section" id="iphone" aria-labelledby="iphone-title">
+      <img src="{{base}}assets/meowly-icon.webp" alt="" width="88" height="88" loading="lazy">
+      <div>
+        <h2 id="iphone-title">{{iphoneTitle}}</h2>
+        <p>{{iphoneBody}}</p>
+      </div>
+    </section>
+  </main>
